@@ -1,0 +1,29 @@
+@use "./../../../assets/styles/global-styles.scss" as *;
+
+.list-messages {
+  box-sizing: border-box; // Isso garante que o padding e a borda não ultrapassem a altura total do contêiner.
+  padding: 10px 0px 10px 0px;
+  flex: 0 0 1; /* Faz a lista ocupar o restante do espaço */
+  overflow-y: auto; /* Habilita o scroll vertical */
+  height: calc(100vh - 15%);
+  scrollbar-width: none; /* Remove o scroll padrão em Firefox */
+
+  &.bordas {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+
+  &.background {
+    background-color: $color-background-secondary;
+  }
+  .linha-divisoria-mensagem {
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 333px;
+    margin-left: auto;
+    border: none;
+    height: 1px;
+    background-color: rgb(215, 214, 214) !important;
+  }
+}

@@ -1,0 +1,35 @@
+<div class="list-messages background bordas">
+    @for (item of listMessages; let i = $index; track $index) {
+        @if(i == 0) {
+            <!-- <div class="list-messages item margem primeiro" > -->
+                <app-list-messages-item 
+                    [nome]="item.nome" 
+                    [horario]="item.horario" 
+                    [mensagem]="item.mensagem" 
+                    [quantidadeMensagensNaoLidas]="item.id.toString()">
+                </app-list-messages-item>
+            <!-- </div> -->
+        } @else if(i != 0 && i < listMessages.length - 1) {
+            <!-- <div class="list-messages item margem outros" > -->
+                <app-list-messages-item 
+                    [nome]="item.nome" 
+                    [horario]="item.horario" 
+                    [mensagem]="item.mensagem" 
+                    [quantidadeMensagensNaoLidas]="item.id.toString()">
+                </app-list-messages-item>
+            <!-- </div> -->
+        }  @else if(i == listMessages.length - 1 ) {
+            <!-- <div class="list-messages item margem ultimo" > -->
+                <app-list-messages-item 
+                    [nome]="item.nome" 
+                    [horario]="item.horario" 
+                    [mensagem]="item.mensagem" 
+                    [quantidadeMensagensNaoLidas]="item.id.toString()">
+                </app-list-messages-item>
+            <!-- </div> -->
+        } 
+        @if(i < listMessages.length - 1) {
+            <hr class="linha-divisoria-mensagem"/>
+        } 
+    }
+</div>

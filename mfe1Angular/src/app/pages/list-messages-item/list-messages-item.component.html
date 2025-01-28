@@ -1,0 +1,13 @@
+<div class="grid-container" (click)="abrirChat()"> 
+    <div class="grid-item-left">
+        <img src="assets/imgs/image.png" class="foto-redonda">
+    </div>
+    <div class="grid-item-mid">
+            <span class="nome">{{nome()}}</span>
+            <span class="mensagem">{{mensagem()}}</span>
+    </div>
+    <div class="grid-item-right">
+        <span class="notification">{{quantidadeMensagensNaoLidas()}}</span>
+        <span class="timestamp">{{horario()}}</span>
+    </div>
+</div>

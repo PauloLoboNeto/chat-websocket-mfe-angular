@@ -1,0 +1,26 @@
+@use "./../../assets/styles/global-styles.scss" as *;
+
+.root {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+
+  &.background {
+    background-color: $color-background-primary;
+  }
+  .header {
+    flex: 0 0 15%;
+  }
+  .list-messages {
+    height: calc(100vh - 15%);
+    // flex: 0 0 1; /* Faz a lista ocupar o restante do espaço */
+    // overflow-y: auto; /* Habilita o scroll vertical */
+    // scrollbar-width: none; /* Remove o scroll padrão em Firefox */
+  //   &.bordas {
+  //     border-top-left-radius: 30px;
+  //     border-top-right-radius: 30px;
+  //   }
+  }
+}
